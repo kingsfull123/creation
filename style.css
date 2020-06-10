@@ -41,13 +41,17 @@ body {
 .heading {
   text-transform: capitalized;
   font-size: 1.5em;
-  padding: 0.85em 0;
+  padding: 0.85em 0 0.65em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .heading2 {
   text-transform: capitalized;
   font-size: 1.1em;
   padding: 0.85em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.65em;
 }
 
 .heading__under {
@@ -55,7 +59,7 @@ body {
   height: 5px;
   background-color: var(--main-purple);
   display: block;
-  margin: 0.5em 0;
+  margin: 5px 0 -14px 0;
 }
 
 .page-section {
@@ -69,6 +73,12 @@ body {
 
 .text {
   font-weight: 300;
+}
+
+.footer-text {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.65;
 }
 
 /* Start of Navigation Style */
@@ -161,13 +171,14 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .our-services__container__cube {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-right: 5px solid var(--main-purple);
 }
 
 .our-services__icon {
@@ -218,3 +229,92 @@ header {
 }
 
 /* End of Recent works Styles */
+
+/* Start of bt Style */
+
+.bt-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  align-items: center;
+}
+
+.blog-first {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blog-content {
+  padding: 0.8em 0;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.blog-date-container {
+  text-align: center;
+}
+
+.blog-date {
+  font-size: 1.65em;
+  padding: 0.45em;
+  background-color: var(--black-background);
+}
+
+.blog-month {
+  padding-top: 0.35em;
+}
+
+.blog-article {
+  margin-left: 1.5em;
+}
+
+.blog-title {
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+  text-transform: capitalize;
+}
+
+.testimonials-first {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonials-content {
+  padding: 0.8em 0;
+}
+
+.testimonials-author {
+  padding-top: 0.5em;
+  font-weight: bold;
+}
+
+.testimonials-name {
+  color: var(--main-purple);
+}
+
+/* End of bt Style */
+
+/* Start of Footer */
+
+footer {
+  margin-top: 1em;
+  background-color: var(--black-background);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 1.5em 0;
+}
+
+.news-inner {
+  display: flex;
+  align-items: top;
+  padding-bottom: 1em;
+}
+
+.news-icon {
+  padding-right: 1em;
+}
+
+/* End of Footer */
