@@ -1,11 +1,12 @@
 /* General Settings */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 img {
@@ -16,6 +17,204 @@ img {
 body {
   width: 100%;
   height: 100%;
-  color: #fff;
-  background-color: #2b2d42;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
 }
+
+.body-inner {
+  max-width: 60%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 1);
+  margin: 0 auto;
+}
+
+/* CSS variables */
+
+:root {
+  --main-purple: #9370db;
+  --black-background: rgba(255, 255, 255, 0.05);
+}
+
+/* Common parts */
+
+.heading {
+  text-transform: capitalized;
+  font-size: 1.5em;
+  padding: 0.85em 0;
+}
+
+.heading2 {
+  text-transform: capitalized;
+  font-size: 1.1em;
+  padding: 0.85em 0;
+}
+
+.heading__under {
+  width: 80px;
+  height: 5px;
+  background-color: var(--main-purple);
+  display: block;
+  margin: 0.5em 0;
+}
+
+.page-section {
+  max-width: 100%;
+  margin: 2em 1em;
+}
+
+.page-section--footer {
+  margin-bottom: 0;
+}
+
+.text {
+  font-weight: 300;
+}
+
+/* Start of Navigation Style */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 0;
+}
+
+.navigation-listing {
+  display: flex;
+}
+
+.navigation-item {
+  list-style: none;
+}
+
+.navigation-item a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 1em;
+  text-align: center;
+  padding: 2em 0.8em;
+}
+
+.selected {
+  background-color: rgba(48, 48, 48, 1);
+  border-bottom: 4px solid var(--main-purple);
+}
+
+/* End of Navigation Style */
+
+/* Start of Hero Style */
+
+.hero {
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero__container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0.5em;
+  bottom: 25px;
+  right: 25px;
+  width: 300px;
+}
+
+.hero__title,
+.hero__subtitle {
+  margin: 0.45em;
+}
+
+/* End of Hero Style */
+
+/* Start of Call For Action Style */
+
+.cfa-container {
+  height: 180px;
+  display: flex;
+
+  box-sizing: border-box;
+  background-color: var(--black-background);
+}
+
+.cfa-text {
+  margin: auto;
+  padding: 0 1.5em;
+  font-size: 1.35em;
+  text-align: center;
+}
+
+.cfa-text-purple {
+  color: var(--main-purple);
+  font-size: 1.25em;
+}
+/* End of Call For Action Style */
+
+/* Start of Our Services Styles */
+
+.our-services__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.our-services__container__cube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-services__icon {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  background-color: var(--black-background);
+}
+
+.our-services__icon i {
+  margin: auto;
+  font-size: 4em;
+}
+
+.our-services__inner {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.our-services__title {
+  margin: 0.5em 0;
+}
+
+.our-services__text {
+  margin: 0.3em 0;
+}
+
+/* End of Our Services Styles */
+
+/* Start of Recent Works Styles */
+
+.works__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.works__container__cube {
+  background-color: var(--black-background);
+}
+
+.works__inner {
+  padding: 1em;
+}
+
+.works__title {
+  padding-bottom: 0.75em;
+}
+
+/* End of Recent works Styles */
